@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 const app = express()
 app.set('views', __dirname + '/views/layout');
-app.use(express.static('public'));
+// app.use(express.static('public'));
 app.use('/assets',express.static(__dirname + '/public/css'));
 app.use(expressEdge);
 app.use(bodyParser.json());
@@ -16,7 +16,7 @@ app.get('/',(req,res) => {
     res.render('index');
 })
 
-app.get('/posts/new',(req,res) => {
+app.get('/posts/new/old',(req,res) => {
     res.render('create');
 })
 
